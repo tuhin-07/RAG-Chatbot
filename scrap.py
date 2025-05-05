@@ -44,9 +44,7 @@ def find_page(tree):
 # with open('angel_data.pkl','wb') as f:
 #     pkl.dump(all_data,f)
 
-with open('angel_data.pkl','rb') as f:
-    data = pkl.load(f)
-    print(data)
+
 
 def chunks(text,max_token=400):
     nltk.download('punkt')
@@ -56,7 +54,7 @@ def chunks(text,max_token=400):
     total_tokens = 0
 
     for sentence in sentences:
-        total_len = sentence.split('.')
+        total_len = len(sentence.split(' '))
         if total_len + total_tokens > max_token:
             chunk.append(''.join(curr))
             curr = [sentence]
@@ -69,4 +67,5 @@ def chunks(text,max_token=400):
         chunk.append(''.join(curr))
 
     return chunk
+
 
