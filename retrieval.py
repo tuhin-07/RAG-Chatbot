@@ -5,7 +5,9 @@ from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 import os
 from transformers import pipeline
 
-pipe = pipeline("text-generation", model="meta-llama/Meta-Llama-3-8B")
+
+pipe = pipeline("text2text-generation", model="google/flan-t5-base")
+# pipe = pipeline("text-generation", model="meta-llama/Meta-Llama-3-8B")
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 index = faiss.read_index('faiss_index.idx')
@@ -17,7 +19,9 @@ def retrieve(query,top_k=3):
     # print(dist)
     if dist[0][0] > 2.0:
         return []
-    
+    # print(len(docs[0]))  
+    for i in idx[0]:
+        print((docs[i]),end="")
     return [docs[i] for i in idx[0]]
 
 def generate_answer(query):
@@ -34,3 +38,4 @@ def generate_answer(query):
 
 q = 'Why do I need to verify my mobile number?'
 print(generate_answer(q))
+
