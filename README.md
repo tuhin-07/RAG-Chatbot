@@ -88,9 +88,10 @@ Save document chunks in docs.pkl.
 ```
 
 ✅ Step 3: Run the FastAPI Backend
-
+```bash
 uvicorn backend.main:app --reload
 API will run at: http://127.0.0.1:8000/chat
+```
 
 
 🧠 How It Works
@@ -115,15 +116,16 @@ Visit: http://localhost:8501 to chat with your support bot.
 ```
 
 ⚙️ Configuration
-backend/rag_pipeline.py: Customize the number of top results, similarity threshold, and model used.
 
+```bash
+backend/rag_pipeline.py: Customize the number of top results, similarity threshold, and model used.
 .env: (Optional) Store OpenAI API key or other settings.
+
+```
 
 
 📁 Requirements File (requirements.txt)
-txt
-Copy
-Edit
+```bash
 faiss-cpu
 sentence-transformers
 openai
@@ -131,26 +133,23 @@ fastapi
 uvicorn
 streamlit
 
+```
+
 
 📤 Deployment Options
 🔵 Backend: Host on Render, AWS EC2, or Heroku
-
 🟢 Frontend: Deploy via Streamlit Cloud or embed in your site using iframe
 
 
 🛡️ Limitations
 Can only answer based on provided documents
-
 Responses depend on the quality and structure of ingested data
-
 "I don't know" logic depends on a similarity threshold—may require tuning
 
 
 🧠 Future Enhancements
 Add document upload support via web UI
-
 Add feedback/rating system for responses
-
 Explore lightweight open-source LLMs for self-hosting
 
 
