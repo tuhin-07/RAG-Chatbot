@@ -92,6 +92,7 @@ Save document chunks in docs.pkl.
 uvicorn backend.main:app --reload
 API will run at: http://127.0.0.1:8000/chat
 
+
 🧠 How It Works
 User sends a query via the frontend.
 
@@ -103,6 +104,7 @@ If similarity is below threshold, respond: "I don't know."
 
 Else, retrieved context is passed to the LLM (e.g., OpenAI GPT) to generate a grounded response.
 
+
 💬 Running the Web Interface (Streamlit)
 In a new terminal:
 
@@ -110,11 +112,13 @@ In a new terminal:
 streamlit run frontend/app.py
 Visit: http://localhost:8501 to chat with your support bot.
 
+```
 
 ⚙️ Configuration
 backend/rag_pipeline.py: Customize the number of top results, similarity threshold, and model used.
 
 .env: (Optional) Store OpenAI API key or other settings.
+
 
 📁 Requirements File (requirements.txt)
 txt
@@ -133,12 +137,14 @@ streamlit
 
 🟢 Frontend: Deploy via Streamlit Cloud or embed in your site using iframe
 
+
 🛡️ Limitations
 Can only answer based on provided documents
 
 Responses depend on the quality and structure of ingested data
 
 "I don't know" logic depends on a similarity threshold—may require tuning
+
 
 🧠 Future Enhancements
 Add document upload support via web UI
