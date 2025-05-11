@@ -69,6 +69,7 @@ Step-by-Step Usage
 Place all your customer support files (.txt, .pdf, etc.) inside:
 
 data/customer_support_docs/
+
 ✅ Step 2: Generate Embeddings & Index
 ```bash
 python backend/ingest_docs.py
@@ -82,6 +83,9 @@ Generate embeddings using SentenceTransformer.
 Create and save a FAISS index.
 
 Save document chunks in docs.pkl.
+
+
+```
 
 ✅ Step 3: Run the FastAPI Backend
 
