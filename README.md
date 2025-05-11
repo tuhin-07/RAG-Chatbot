@@ -50,15 +50,19 @@ rag-chatbot/
 git clone https://github.com/your-username/rag-chatbot.git
 cd rag-chatbot
 
+```
 ### 2. Create a Virtual Environment
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
+```
 ### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
+
+```
 
 Step-by-Step Usage
 ✅ Step 1: Add Your Documents
