@@ -96,13 +96,9 @@ API will run at: http://127.0.0.1:8000/chat
 
 🧠 How It Works
 User sends a query via the frontend.
-
 Query is embedded using the same model as used during ingestion.
-
 FAISS index is searched for top similar document chunks.
-
 If similarity is below threshold, respond: "I don't know."
-
 Else, retrieved context is passed to the LLM (e.g., OpenAI GPT) to generate a grounded response.
 
 
@@ -137,19 +133,19 @@ streamlit
 
 
 📤 Deployment Options
-🔵 Backend: Host on Render, AWS EC2, or Heroku
-🟢 Frontend: Deploy via Streamlit Cloud or embed in your site using iframe
+- 🔵 Backend: Host on Render, AWS EC2, or Heroku
+- 🟢 Frontend: Deploy via Streamlit Cloud or embed in your site using iframe
 
 
 🛡️ Limitations
-Can only answer based on provided documents
-Responses depend on the quality and structure of ingested data
-"I don't know" logic depends on a similarity threshold—may require tuning
+- Can only answer based on provided documents
+- Responses depend on the quality and structure of ingested data
+- "I don't know" logic depends on a similarity threshold—may require tuning
 
 
 🧠 Future Enhancements
-Add document upload support via web UI
-Add feedback/rating system for responses
-Explore lightweight open-source LLMs for self-hosting
+- Add document upload support via web UI
+- Add feedback/rating system for responses
+- Explore lightweight open-source LLMs for self-hosting
 
 
