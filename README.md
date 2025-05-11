@@ -95,11 +95,11 @@ API will run at: http://127.0.0.1:8000/chat
 
 
 🧠 How It Works
-User sends a query via the frontend.
-Query is embedded using the same model as used during ingestion.
-FAISS index is searched for top similar document chunks.
-If similarity is below threshold, respond: "I don't know."
-Else, retrieved context is passed to the LLM (e.g., OpenAI GPT) to generate a grounded response.
+- User sends a query via the frontend.
+- Query is embedded using the same model as used during ingestion.
+- FAISS index is searched for top similar document chunks.
+- If similarity is below threshold, respond: "I don't know."
+- Else, retrieved context is passed to the LLM (e.g., OpenAI GPT) to generate a grounded response.
 
 
 💬 Running the Web Interface (Streamlit)
