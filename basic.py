@@ -1,2 +1,17 @@
-s ='Please Wait... Please Wait... Please Wait... Please Wait... Please Wait... Please Wait... SBI Share Price Adani Enterprises Share Price Reliance Share Price Mazagon Dock Share Price ITC Share Price HDFC Bank Share Price Infosys Share Price Adani Ports Share Price TCS Share Price Tata Motors Share Price Please Wait... Please Wait... Please Wait... Please Wait... Please Wait... Please Wait... SBI Share Price Adani Enterprises Share Price Reliance Share Price Mazagon Dock Share Price ITC Share Price HDFC Bank Share Price Infosys Share Price Adani Ports Share Price TCS Share Price Tata Motors Share Price Know how to track your account opening application status on Angel One application Learn how to activate F&O, Commodity and Currency segments on Angel One Know all about fund payout/withdrawal process Learn how to check the status of your order in Angel One app Know all about the brokerage and charges applicable on your trades Step by step guide to add funds to your Angel One account Know the process add a new bank account to Angel One Learn how to modify mobile number, Email ID and other profile details in Angel One Learn how to activate DDPI and the benefits associated with it Know about how refer and earn works on Angel One A lump sum investment is investing the entire amount at one go in a specific mutual fund scheme whereas when one invests through SIP, a fixed sum of money is invested at regular intervals in the mutual fund scheme. Our experts will be happy to assist you Still have any queries? Connect with our support team. For any partnership requests please reach us at 022-40003600(Extn: 6925) Open Free Demat Account! Join our 3 Cr+ happy customers Get the link to download the App \u20b90 brokerage for first 30 days* Join our 3 Cr+ happy customers Minimal Brokerage Charges \u20b90 brokerage on stock investments and flat \u20b90 AMC for first year. ARQ Prime Make smart decisions with ARQ prime, a rule based investment engine Technology Enabled Trade or invest anywhere, anytime with our App or web platforms By proceeding, I agree toT&CandPrivacy Policy. Do you already have an account?Login Copyright - All rights reserved We collect, retain, and use your contact information for legitimate business purposes only, to contact you and to provide you information & latest updates regarding our products & services.\n\t\t\tWe do not sell or rent your contact information to third parties. Please note that by submitting the above mentioned details, you are authorizing us to Call/SMS you even though you may be registered under DND. We shall Call/SMS you for a period of 12 months.Brokerage will not exceed SEBI prescribed limitsDisclaimerPrivacy PolicyAny Grievances related the aforesaid brokerage scheme will not be entertained on exchange platform.'
-print(len(s))
+from transformers import AutoTokenizer
+
+# Load the tokenizer for LLaMA 3 (or any other model)
+tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
+
+# Your input text
+text = "How many tokens are in this sentence?"
+
+# Tokenize the input
+tokens = tokenizer(text, return_tensors="pt")
+
+# Get the number of tokens
+num_tokens = tokens["input_ids"].shape[1]
+
+print(f"Number of tokens: {num_tokens}")
+print(tokenizer.tokenize(text))         # List of string tokens
+print(tokenizer.convert_ids_to_tokens(tokens["input_ids"][0]))  # Tokens with IDs
